@@ -35,9 +35,6 @@ dotnet run
 Follow the prompts in the console to add party names and guest counts.
 
 🧩 Sample Output
-sql
-Copy
-Edit
 Welcome, what is the name for your party? Neill Family
 How many are in your party? 4
 Are there any more parties to enter? y/n: y
