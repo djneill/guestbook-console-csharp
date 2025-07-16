@@ -35,6 +35,7 @@ dotnet run
 Follow the prompts in the console to add party names and guest counts.
 
 🧩 Sample Output
+```
 Welcome, what is the name for your party? Neill Family
 How many are in your party? 4
 Are there any more parties to enter? y/n: y
@@ -47,6 +48,7 @@ The parties for today are:
 Neill Family
 Smiths
 We have a total of 7 guest.
+```
 🛠️ Tech Stack
 C#
 
