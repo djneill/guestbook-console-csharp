@@ -54,7 +54,7 @@ C#
 
 .NET Console App
 
-Visual Studio / VS Code / .NET CLI
+VS Code
 
 🔄 Future Improvements (Stretch Goals)
 Store entries as objects with both name and guest count
