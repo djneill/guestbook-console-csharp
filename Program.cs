@@ -1,15 +1,7 @@
 ﻿using guestBook;
-bool entriesComplete = false;
-List<string> party = new List<string>();
-int totalGuest = 0;
 
-do
-{
-    string partyName = Messages.AskPartyName();
-    party.Add(partyName);
-    int numberOfGuest = Messages.AskPartyNumber();
-    totalGuest += numberOfGuest;
-    entriesComplete = Messages.NoMoreEntries();
-} while (entriesComplete == false);
+GuestBookLogic.WelcomeMessage();
 
-Messages.GuestList(party, totalGuest);
+(List<string> partyNames, int totalGuest) = GuestBookLogic.GetGuestList();
+
+GuestBookLogic.DisplayGuest(partyNames, totalGuest);
