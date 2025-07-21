@@ -1,30 +1,40 @@
-# Guest Book - C# Console App
+# Guest Book – C# Console App
 
-This is a beginner-level C# console application that simulates a guest book for party check-ins. It was built as part of my journey learning C# and .NET fundamentals, with a focus on user input, loops, conditional logic, and basic data structures.
+This C# console application that simulates a guest book for party check-ins. It was built as part of my journey to learn C# and .NET fundamentals, focusing on user input, loops, validation, and basic data structures like dictionaries.
+
+---
 
 ## 📚 What It Does
 
 The program:
 
-- Prompts the user to enter the name of a party.
-- Asks how many guests are in that party.
-- Repeats until the user is done entering parties.
-- Then displays a summary of all party names and the total number of guests.
+- Greets the user with a welcome message
+- Prompts for the name of a party
+- Asks how many people are in the party
+- Repeats until no more entries are needed
+- Displays a summary of all parties and the total guest count
+
+---
 
 ## 🧠 What I Learned
 
 - Creating and using **static methods** in C#
-- Collecting and validating **user input** from the console
-- Managing collections using a **`List<string>`**
-- Performing basic **input validation** with `int.TryParse`
-- Structuring code across multiple files with a `Messages` class for cleaner organization
+- Structuring code with reusable helper methods
+- Validating user input using `int.TryParse()`
+- Collecting data using a **`Dictionary<string, int>`** to map party names to guest sizes
+- Using **top-level statements** for a clean `Program.cs`
+- Separating logic into a dedicated class (`GuestBookLogic`) for maintainability
+
+---
 
 ## 🚀 How to Run It
 
-1. Clone the repo:
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/guestbook-console-csharp.git
    cd guestbook-console-csharp
+
    Build and run the app using the .NET CLI:
    ```
 
@@ -35,20 +45,26 @@ dotnet run
 Follow the prompts in the console to add party names and guest counts.
 
 🧩 Sample Output
-```
-Welcome, what is the name for your party? Neill Family
-How many are in your party? 4
-Are there any more parties to enter? y/n: y
 
-Welcome, what is the name for your party? Smiths
-How many are in your party? 3
-Are there any more parties to enter? y/n: n
-
-The parties for today are:
-Neill Family
-Smiths
-We have a total of 7 guest.
 ```
+Welcome to the guest book app
+-----------------------------
+
+What is the name of your party? Neill Family
+How many people are in your party? 4
+Are there any more parties to enter? (y/n): y
+
+What is the name of your party? Smiths
+How many people are in your party? 3
+Are there any more parties to enter? (y/n): n
+
+Tonight's parties include:
+- Neill Family: 4
+- Smiths: 3
+
+Total number of guests: 7
+```
+
 🛠️ Tech Stack
 C#
 
@@ -57,18 +73,22 @@ C#
 VS Code
 
 🔄 Future Improvements (Stretch Goals)
-Store entries as objects with both name and guest count
+Create a Party class to encapsulate name and guest count
 
-Sort parties alphabetically
+Sort parties alphabetically before displaying
+
+Add input validation for empty or duplicate names
+
+Write unit tests for helper methods
 
 Save guest data to a file or database
 
 Add error handling for empty input or edge cases
 
 📂 File Overview
-Program.cs - Main execution loop that drives the app
+Program.cs – Main entry point of the app using top-level statements
 
-Messages.cs - Helper methods for interacting with the user
+GuestBookLogic.cs – Contains all helper methods for handling input, data collection, and display logic
 
 ✍️ Author
 DJ Neill

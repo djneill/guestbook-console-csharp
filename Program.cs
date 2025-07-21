@@ -1,7 +1,8 @@
-﻿using guestBook;
+﻿
+using guestBook;
 
 GuestBookLogic.WelcomeMessage();
 
-(List<string> partyNames, int totalGuest) = GuestBookLogic.GetGuestList();
+Dictionary<string, int> guestList = GuestBookLogic.GetAllGuest();
 
-GuestBookLogic.DisplayGuest(partyNames, totalGuest);
+GuestBookLogic.DisplayGuestList(guestList);
